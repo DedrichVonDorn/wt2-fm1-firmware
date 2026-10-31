@@ -1,5 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-only */
-/* Send reverb, synced delay and master stage: a port of 9W9's er99_verb_tick,
+/* 9W9 by A Thousand Details - https://github.com/athousanddetails/schwung-9W9 (modified port).
+ * Send reverb, synced delay and master stage: a port of 9W9's er99_verb_tick,
  * er99_dly_tick, master distortion and master_glue (GPL-3.0). See fxbus.h. */
 #define WT_FX_TABLES_DEFINE                /* this unit owns the effects' tables */
 #include "wt_fx.h"

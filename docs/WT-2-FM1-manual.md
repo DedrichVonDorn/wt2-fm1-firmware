@@ -68,7 +68,7 @@ Contents
 
 | File | What it is |
 |---|---|
-| `wt2-fm1-922.fwsc` | The WT-2 firmware package for the FM-1 (package identity `FM-1_922`). The screen and the USB MIDI port say WT-2. |
+| `wt2f.fwsc` | The WT-2 firmware package for the FM-1 (package identity `FM-1_922`). The screen and the USB MIDI port say WT-2. |
 | WT-2 editor | The browser editor, at https://fm1.thatsoundshot.com (coming soon). It is not part of this repository. |
 | `VARIANT=wt2 ./build-fw.sh` | Builds the firmware into `build/wt2.fwsc`, identity `FM-1_922` (needs Docker or OrbStack). |
 | `tools/rename_pkg.py` | Gives a package another identity so M-UPGRADE accepts it. |
@@ -78,10 +78,10 @@ Contents
 M-UPGRADE only installs a package whose identity differs from the one in the keyboard. If you have just installed a build and want to install another, give the new package a new number:
 
 ```
-python3 tools/rename_pkg.py build/wt2.fwsc wt2-fm1-922.fwsc "FM-1_923"
+python3 tools/rename_pkg.py build/wt2.fwsc wt2f.fwsc "FM-1_923"
 ```
 
-Then open M-UPGRADE, choose the package and install, exactly as for WT-1 (FM-1 manual section 2.2). At power-on the screen says **WT-2** (the crash screen and safe mode use the same name). Over USB the MIDI port is WT-2, and the updater's identity request is answered `FM-1_922`, which is also the identity written into `wt2-fm1-922.fwsc`. Power-on shortcuts, the crash-recovery path and going back to stock firmware are the same as WT-1 (FM-1 manual sections 2.4 and 2.5). Saved patches stay in the same format; the drum patterns of a WT-1 save are ignored.
+Then open M-UPGRADE, choose the package and install, exactly as for WT-1 (FM-1 manual section 2.2). At power-on the screen says **WT-2** (the crash screen and safe mode use the same name). Over USB the MIDI port is WT-2, and the updater's identity request is answered `FM-1_922`, which is also the identity written into `wt2f.fwsc`. Power-on shortcuts, the crash-recovery path and going back to stock firmware are the same as WT-1 (FM-1 manual sections 2.4 and 2.5). Saved patches stay in the same format; the drum patterns of a WT-1 save are ignored.
 
 ---
 
@@ -500,5 +500,5 @@ These are what the Mac tests and the code say but a real FM-1 has not yet confir
 4. **The CPU** with a 4-note chord on a heavy patch (both oscillators with unison, vowel filter, chorus on) has not been measured on the keyboard.
 5. **The vowel filter's level and sound** are checked on the Mac by spectrum (energy at the two formants), not by ear; the output is scaled up (x3) to match the other filters, so lower DRIVE or the patch level if it is too loud.
 6. **The editor's USB path** with WT-2: patch transfer uses the same SysEx as WT-1 (206 parameters), but drawn shapes are not transferred.
-7. **The RAM figure in section 1.4** (about 30 KB free) is the previous linker reading plus the sizes of the buffers that moved. It has not been read back from a new `wt2-fm1-922.fwsc` link map. The chord-headroom work adds on the order of a few hundred bytes to the synth object (measured on the host), not another buffer.
+7. **The RAM figure in section 1.4** (about 30 KB free) is the previous linker reading plus the sizes of the buffers that moved. It has not been read back from a new `wt2f.fwsc` link map. The chord-headroom work adds on the order of a few hundred bytes to the synth object (measured on the host), not another buffer.
 8. **Chord level, the rider, HYPER, the new warp modes and the new modulation destinations** are checked by rendering on the Mac. They have not been heard on a keyboard, and this build was not flashed. The WT-2 WebAssembly was not rebuilt here (no emscripten), so the editor checks in `web/test_wasm2.mjs` are written but not executed.

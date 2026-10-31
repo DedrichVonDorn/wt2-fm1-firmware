@@ -1,5 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0-only */
-/* X0X drum part: the 9W9 TR-909 engine (Charles Vestal, GPL-3.0; itself grown out
+/* X0X drum part: the 9W9 TR-909 engine (9W9 by A Thousand Details - https://github.com/athousanddetails/schwung-9W9,
+ * GPL-3.0 with section 7 terms, modified; itself grown out
  * of ER-99 by Matthew Cieplak, GPL-3.0), ported to the FM-1.
  *
  * Circuit-modelled BD, SD, LT/MT/HT, RS, CP; sampled CH/OH (one buffer, choking

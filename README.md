@@ -38,7 +38,7 @@ The full manual is in [docs/WT-2-FM1-manual.md](docs/WT-2-FM1-manual.md).
 
 ## Install
 
-1. Get the WT-2 package, `wt2-fm1-922.fwsc`, from this repo's Releases page once it's published (or build it yourself, see below).
+1. Get the WT-2 package, `wt2f.fwsc`, from this repo's Releases page once it's published (or build it yourself, see below).
 2. Open M-VAVE's M-UPGRADE app, choose the package and install it, just like a normal FM-1 update.
 3. At power on the screen says **WT-2**, and over USB the MIDI port is called WT-2.
 
@@ -46,7 +46,7 @@ M-UPGRADE only installs a package whose identity is different from the one alrea
 To install a newer WT-2 build over an older one, give it a new number first:
 
 ```
-python3 tools/rename_pkg.py wt2-fm1-922.fwsc wt2-fm1-923.fwsc "FM-1_923"
+python3 tools/rename_pkg.py wt2f.fwsc wt2g.fwsc "FM-1_923"
 ```
 
 ## Go back to the factory firmware
@@ -85,8 +85,9 @@ That makes `build/wt2.fwsc` with the identity `FM-1_922`. Host tests run with `s
 WT-2 is free software under the GPL-3.0 (`GPL-3.0-only`, see [LICENSE](LICENSE)). It stands on the work of:
 
 - [Felucca](https://github.com/hugelton/Felucca) by Leo Kuroshita (@kurogedelic), Hügelton Instruments: the platform code and the update loader.
-- X0X by Charles Vestal: the effects chain, the sequencer design, and the input and storage code.
-- [9W9](https://github.com/athousanddetails/schwung-9W9) by athousanddetails, after [ER-99](https://github.com/matthewcieplak/er-99) by Matthew Cieplak: the effects.
+- X0X (GPL-3.0-only): the effects chain, the sequencer design, and the input and storage code.
+- 9W9 by A Thousand Details - [https://github.com/athousanddetails/schwung-9W9](https://github.com/athousanddetails/schwung-9W9) (Copyright (C) 2026 A Thousand Details, GPL-3.0 with section 7 additional terms), itself after [ER-99](https://github.com/matthewcieplak/er-99) by Matthew Cieplak. WT-2's effects are a modified port of 9W9's (changed for the FM-1, via X0X). This is not the original 9W9 and is not made or endorsed by A Thousand Details.
+- 8W8 by A Thousand Details - [https://github.com/athousanddetails/schwung-8W8](https://github.com/athousanddetails/schwung-8W8): a modified port of its 808 engine sits in `core/drums/`, not linked into the WT-2 firmware.
 - The SMK-37 Pro port by M. Geisler.
 - Fonts: Barlow Semi Condensed and Terminus (SIL OFL 1.1).
 
