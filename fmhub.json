@@ -1,0 +1,6 @@
+{
+  "what": "Wavetable synth firmware for the FM-1: two wavetable oscillators with unison and warp, sub and noise, filter plus vowel filter, three envelopes, two LFOs with drawable shapes, 8 slot mod matrix, chorus, delay, reverb, step sequencer and arpeggiator.",
+  "author": "Dedrich",
+  "kinds": ["synth"],
+  "editor": "https://fm1.thatsoundshot.com"
+}
