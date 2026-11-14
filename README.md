@@ -96,3 +96,5 @@ All the details are in [LICENSING.md](LICENSING.md). The factory firmware in `of
 ## No warranty
 
 WT-2 comes with no warranty of any kind. Installing custom firmware is at your own risk.
+
+You can also try wt2 fm1 Firmware in the browser, no flashing needed, in the free community [FM-1 Emulator](https://fm1-emulator.atst.tools/).
